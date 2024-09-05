@@ -10,7 +10,7 @@ namespace Data_structures_exercise.servis
 {
     internal class ReadJson<T>
     {
-        public static List<T> readJson(string data)
+        public async static Task<List<T>> readJson(string data)
         {
             
             List<T> a = JsonSerializer.Deserialize<List<T>>(data)!;

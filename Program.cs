@@ -4,4 +4,5 @@ using Data_structures_exercise.Model;
 using Data_structures_exercise.servis;
 
 Console.WriteLine("Hello, World!");
-RunFunctions.RanDefence();
+BST bST = await RunFunctions.RanDefence();
+await RunFunctions.RanThreats(bST);

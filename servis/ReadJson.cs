@@ -10,6 +10,8 @@ namespace Data_structures_exercise.servis
 {
     internal class ReadJson<T>
     {
+        // קוראת JSON
+        //o(n)
         public async static Task<List<T>> readJson(string data)
         {
             

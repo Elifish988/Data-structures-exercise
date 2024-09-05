@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Data_structures_exercise
 {
@@ -14,6 +15,7 @@ namespace Data_structures_exercise
         public static List<Threat> Threats { get; set; }
 
         //מריץ את מערך ההגנה
+        //o(n log n)
         public static async Task<BST> RanDefence()
         {
             Console.WriteLine("File reader:");
@@ -39,6 +41,7 @@ namespace Data_structures_exercise
 
 
         // קורא את ההתקפות
+        ////o(n log n)
         public static async Task RanThreats(BST bST)
         {
             Console.WriteLine("File reader:");
@@ -46,8 +49,10 @@ namespace Data_structures_exercise
             string data = File.ReadAllText("D:\\KodcodData\\Data structures exercise\\Jsons\\threats.json");
             Threats = await ReadJson<Threat>.readJson(data);
             Console.WriteLine("Runs attacks:");
+            int AttackNum = 1;
             foreach (Threat thread in Threats)
             {
+                Console.WriteLine($"attack number  {AttackNum}");
                 Console.WriteLine("Defines a severity level:");
                 await Task.Delay(1000);
                 int severity = ThreastServer.Severity(thread);
@@ -67,7 +72,7 @@ namespace Data_structures_exercise
                         Console.WriteLine(protection);
                     }
                 }
-
+                AttackNum++;
             };
 
         }

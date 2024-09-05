@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data structures exercise", "Data structures exercise.csproj", "{CAD4E704-33D2-4A41-87CF-FCBB1AB2080B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAD4E704-33D2-4A41-87CF-FCBB1AB2080B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD4E704-33D2-4A41-87CF-FCBB1AB2080B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD4E704-33D2-4A41-87CF-FCBB1AB2080B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD4E704-33D2-4A41-87CF-FCBB1AB2080B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6729440D-F7AF-4259-8BD5-673DFD7B6D71}
+	EndGlobalSection
+EndGlobal

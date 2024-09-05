@@ -37,27 +37,36 @@ namespace Data_structures_exercise
             return node;
         }
 
+
+        //הדפסה של העץ בצורת עץ
         public void PrintPreOrder()
         {
             Console.WriteLine("Tree structure with left/right child distinctions:");
-            PrintPreOrderRecursive(root);
+            PrintTree(root , "", true);
         }
-
-        private void PrintPreOrderRecursive(Node root)
+        private void PrintTree(Node node, string indent, bool last)
         {
-            Console.WriteLine(PrintServis.PrintNode(root));
-            if (root.Left != null) 
+            if (node != null)
             {
-                PrintPreOrderRecursive(root.Left);
+                Console.Write(indent);
+                if (last)
+                {
+                    Console.Write("R----");
+                    indent += "   ";
+                }
+                else
+                {
+                    Console.Write("L----");
+                    indent += "|  ";
+                }
+                Console.WriteLine(PrintServis.PrintNode(root));
+                PrintTree(node.Left, indent, false);
+                PrintTree(node.Right, indent, true);
             }
-            if (root.Right != null)
-            {
-                PrintPreOrderRecursive(root.Right);
-            }
-
-
         }
 
+
+        //החזרת ערך המינימום של העץ
         public int? GetMin()
         {
             return GetMin(root);
@@ -102,35 +111,6 @@ namespace Data_structures_exercise
             return root;
 
         }
-
-
-        //מציאת הגנה על פי רמת חומרה
-        //        public string Find(int severity)
-        //        {
-        //            // החזרת סטרינג במידה והאיום קטן מהטווח
-        //            if (severity < GetMin())
-        //                return "Attack severity is below the threshold.Attack is ignored";
-        //            return FindRecursive(root, severity); ;
-        //        }
-
-
-        //        public string FindRecursive(Node root, int severity)
-        //        {
-        //            if (root == null)
-        //                return "No suitable defence was found.Brace for impact"!
-        //;
-        //            if (severity < root.MinSeverity)
-        //            {
-        //                return FindRecursive(root.Left, severity);
-        //            }
-        //            else if(severity > root.MaxSeverity)
-        //            {
-        //                return FindRecursive(root.Right, severity);
-        //            }
-        //            return root.Defenses.ToString();
-
-        //        }
-
 
     }
 

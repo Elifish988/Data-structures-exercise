@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Data_structures_exercise.servis
 {
+    //עוזרת בהדפסה יפה של הקוד
     internal class PrintServis
     {
         // מחזירה סטרינג להדפסה

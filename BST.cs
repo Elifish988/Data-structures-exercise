@@ -14,13 +14,13 @@ namespace Data_structures_exercise
     {
         private Node root;
 
-        public BST()
+        internal BST()
         {
             root = null;
         }
 
         //O(log n)
-        public void Insert(Node newNode)
+        internal void Insert(Node newNode)
         {
             root = InsertRecursive(root, newNode);
         }
@@ -41,7 +41,7 @@ namespace Data_structures_exercise
 
         //הדפסה של העץ בצורת עץ
         //O(n)
-        public void PrintPreOrder()
+        internal void PrintPreOrder()
         {
             Console.WriteLine("Tree structure with left/right child distinctions:");
             PrintTree(root , "", true);
@@ -54,12 +54,12 @@ namespace Data_structures_exercise
                 Console.Write(indent);
                 if (last)
                 {
-                    Console.Write("R----");
+                    Console.Write("R ----");
                     indent += "   ";
                 }
                 else
                 {
-                    Console.Write("L----");
+                    Console.Write("L ----");
                     indent += "|  ";
                 }
                 Console.WriteLine(PrintServis.PrintNode(node));
@@ -71,7 +71,7 @@ namespace Data_structures_exercise
 
         //החזרת ערך המינימום של העץ
         // O(log n)
-        public int? GetMin()
+        internal int? GetMin()
         {
             return GetMin(root);
         }
@@ -93,7 +93,7 @@ namespace Data_structures_exercise
 
         //מציאת הגנה על פי רמת חומרה
         // O(log n)
-        public Node Find(int severity)
+        internal Node Find(int severity)
         {
             
             return FindRecursive(root, severity); ;

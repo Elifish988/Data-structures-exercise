@@ -9,14 +9,15 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Data_structures_exercise
 {
+    // מריצה את הפעילויות הרשיות בשביל הרצת התכנה
     internal class RunFunctions
     {
-        public static List<Node> nods {  get; set; }
-        public static List<Threat> Threats { get; set; }
+        internal static List<Node> nods {  get; set; }
+        internal static List<Threat> Threats { get; set; }
 
         //מריץ את מערך ההגנה
         //o(n log n)
-        public static async Task<BST> RanDefence()
+        internal static async Task<BST> RanDefence()
         {
             Console.WriteLine("File reader:");
             await Task.Delay(1000);

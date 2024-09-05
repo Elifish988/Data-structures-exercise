@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Data_structures_exercise.servis
 {
+    //עוזרת בקריאת הקובץ
     internal class ReadJson<T>
     {
         // קוראת JSON

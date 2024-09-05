@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Data_structures_exercise.Model;
 
-namespace Data_structures_exercise.Model
+namespace Data_structures_exercise.servis
 {
+    //עוזרת להבין את חומרת המתקפה
     internal class ThreastServer
     {
+
         // מילון להמרת חומרת ההתקפה
         //o(1)
-        public static Dictionary<string, int> TargetValue = new Dictionary<string, int>
+        internal static Dictionary<string, int> TargetValue = new Dictionary<string, int>
         {
             {"Web Server", 10 },
             {"Database", 15 },
@@ -20,7 +23,7 @@ namespace Data_structures_exercise.Model
 
         // מגדירה חומרה על פי יעוד ההתקפה
         //o(1)
-        public static int GetTargetValue(string key)
+        internal static int GetTargetValue(string key)
         {
             if (TargetValue.TryGetValue(key, out int value))
             {
@@ -32,11 +35,11 @@ namespace Data_structures_exercise.Model
 
         // מגדירה רמת חומרה כללית
         //o(1)
-        public  static int Severity(Threat thread)
+        internal static int Severity(Threat thread)
         {
-            int Severity = 
-                (thread.Volume
-                * thread.Sophistication)
+            int Severity =
+                thread.Volume
+                * thread.Sophistication
                 + GetTargetValue(thread.Target);
             return Severity;
 
